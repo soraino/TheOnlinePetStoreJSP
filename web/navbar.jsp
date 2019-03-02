@@ -26,18 +26,18 @@
             </a>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    Product
+                <a class="navbar-link" href="../ProductServlet?sendRedirect=/Products/index.jsp">
+                    Main Store
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="../ProductServlet">
+                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Products/index.jsp">
                         Show all product
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Category/index.jsp">
                         Show all category
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Products/index.jsp">
                         Show all brands
                     </a>
                 </div>

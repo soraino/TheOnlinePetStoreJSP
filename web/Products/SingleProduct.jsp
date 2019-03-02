@@ -1,7 +1,7 @@
 <%@ page import="Bean.ImageBean" %>
 <%@ page import="java.util.List" %>
 <%@ page import="Bean.ProductBean" %>
-<%@ page import="java.util.Hashtable" %>
+<%@ page import="java.util.HashMap" %>
 <%--
   Created by IntelliJ IDEA.
   User: lolsp
@@ -32,8 +32,8 @@
                 <%
                     ProductBean product = null;
                     int productId = Integer.parseInt(request.getParameter("id"));
-                    if(session.getAttribute("products") == null){
-                        response.sendRedirect("../ProductServlet?redirect=SingleProduct.jsp");
+                    if(session.getAttribute("products") == null || session.getAttribute("brands") == null|| session.getAttribute("categories") == null){
+                        response.sendRedirect("../ProductServlet?sendRedirect=SingleProduct.jsp");
                     }else {
                         product = ((List<ProductBean>) session.getAttribute("products")).get(productId);
                         List<ImageBean> images = product.getImages();
@@ -41,13 +41,13 @@
                 <h1 class="title is-2"><%=product.getName()%></h1>
                 <small>Brand:
                     <a>
-                        <%=((Hashtable<Integer,String>)session.getAttribute("brands")).get(product.getBrandId())%>
+                        <%=((HashMap<Integer,String>)session.getAttribute("brands")).get(product.getBrandId())%>
                     </a>
                 </small>
                 <br>
                 <small>Category:
                     <a>
-                        <%=((Hashtable<Integer,String>)session.getAttribute("categories")).get(product.getCategoryId())%>
+                        <%=((HashMap<Integer,String>)session.getAttribute("categories")).get(product.getCategoryId())%>
                     </a>
                 </small>
                 <br>

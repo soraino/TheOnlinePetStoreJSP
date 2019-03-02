@@ -8,8 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="Bean.ProductBean"%>
 <%@page import="java.util.List"%>
-<%@ page import="java.util.ArrayList" %>
-<html>
 <html>
 <jsp:include page="../header.html"></jsp:include>
 <body>
@@ -19,12 +17,12 @@
     <div class="columns is-multiline">
         <%
             if(session.getAttribute("products") == null){
-                response.sendRedirect("../ProductServlet");
+                response.sendRedirect("../ProductServlet?sendRedirect=/Products/index.jsp");
             }else{
                 List<ProductBean> products = (List<ProductBean>)session.getAttribute("products");
                 for (int i = 0; i < products.size(); i++) {
         %>
-        <div class="column is-one-fifth" onclick="window.location.href = './SingleProduct.jsp?id=<%=i%>'">
+        <div class="column is-one-fifth" onclick="window.location.href = './singleProduct.jsp?id=<%=i%>'">
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-square">
@@ -51,7 +49,6 @@
             }
         %>
     </div>
-
 </div>
 </body>
 </html>

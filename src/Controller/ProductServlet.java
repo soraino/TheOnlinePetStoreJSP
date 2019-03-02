@@ -4,21 +4,18 @@ import Bean.ImageBean;
 import Bean.ProductBean;
 import Entity.ApplicationDb;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.ws.rs.core.GenericEntity;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -47,7 +44,7 @@ public class ProductServlet extends HttpServlet {
 
             // run and get all the products
             List<ProductBean> products = new ArrayList<>();
-            Hashtable<Integer,Integer> idIndexTable = new Hashtable<>();
+            HashMap<Integer,Integer> idIndexTable = new HashMap<>();
             int index = 0;
             while (rs1.next()) {
                 if(rs1.getDate("DeleteAt") == null) {
@@ -79,14 +76,14 @@ public class ProductServlet extends HttpServlet {
             }
 
 
-            Hashtable<Integer,String> brandsTable = new Hashtable<>();
+            HashMap<Integer,String> brandsTable = new HashMap<>();
             while(rs3.next()){
                 int brandId = rs3.getInt("BrandId");
                 String name = rs3.getString("Name");
                 brandsTable.put(brandId,name);
             }
 
-            Hashtable<Integer,String> categoryTable = new Hashtable<>();
+            HashMap<Integer,String> categoryTable = new HashMap<>();
             while(rs4.next()){
                 int categoryId = rs4.getInt("CategoryId");
                 String name = rs4.getString("Name");
@@ -101,6 +98,6 @@ public class ProductServlet extends HttpServlet {
         }catch(Exception e){
             // woops
         }
-        response.sendRedirect("/Products/index.jsp");
+        response.sendRedirect(request.getParameter("sendRedirect"));
     }
 }
