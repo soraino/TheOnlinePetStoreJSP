@@ -22,7 +22,7 @@
                 List<ProductBean> products = (List<ProductBean>)session.getAttribute("products");
                 for (int i = 0; i < products.size(); i++) {
         %>
-        <div class="column is-one-fifth" onclick="window.location.href = './singleProduct.jsp?id=<%=i%>'">
+        <div class="column is-one-fifth" onclick="window.location.href = 'singleProduct.jsp?id=<%=i%>'">
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-square">

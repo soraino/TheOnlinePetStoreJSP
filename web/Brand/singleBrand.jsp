@@ -31,7 +31,7 @@
             for (int i = 0; i < products.size(); i++) {
                 if (products.get(i).getBrandId() == brandId) {
         %>
-        <div class="column is-one-fifth" onclick="window.location.href = './SingleProduct.jsp?id=<%=i%>'">
+        <div class="column is-one-fifth" onclick="window.location.href = './singleProduct.jsp?id=<%=i%>'">
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-square">

@@ -35,10 +35,11 @@ public class BrandsInCategoryServlet extends HttpServlet {
             }
             HttpSession session = request.getSession();
             session.setAttribute("brandsIdInCategory",brandIds);
+            session.setAttribute("currCategoryBrands", request.getParameter("category"));
             if(session.getAttribute("brands") == null){
-                response.sendRedirect("../ProductServlet?sendRedirect=./singleCategoryProducts.jsp?category="+request.getParameter("category"));
+                response.sendRedirect("../ProductServlet?sendRedirect=../Category/singleCategoryBrands.jsp?category="+request.getParameter("category"));
             }else{
-                response.sendRedirect("./singleCategoryProducts.jsp?category="+request.getParameter("category"));
+                response.sendRedirect("../Category/singleCategoryBrands.jsp?category="+request.getParameter("category"));
             }
 
         }catch(Exception e){

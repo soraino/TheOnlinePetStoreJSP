@@ -13,9 +13,13 @@
 <body>
 <jsp:include page="../navbar.jsp"></jsp:include>
 <div class="container" id="app">
+    <h1 class="title is-2">
+        Brands in <%=request.getParameter("category")%> category
+    </h1>
     <div class="columns is-multiline">
         <%
-            if (session.getAttribute("brandsIdInCategory") == null) {
+            if (session.getAttribute("brandsIdInCategory") == null
+                    || !session.getAttribute("currCategoryBrands").equals(request.getParameter("category"))) {
                 response.sendRedirect("../BrandsInCategoryServlet?category="+request.getParameter("category"));
             } else {
                 HashMap<Integer, String> brands = (HashMap<Integer, String>) session.getAttribute("brands");

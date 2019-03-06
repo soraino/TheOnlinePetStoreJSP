@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="../">
             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
         </a>
 
@@ -21,7 +21,7 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item">
+            <a href="../" class="navbar-item">
                 Home
             </a>
 
@@ -31,13 +31,13 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Products/index.jsp">
+                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Products">
                         Show all product
                     </a>
-                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Category/index.jsp">
+                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Category">
                         Show all category
                     </a>
-                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Products/index.jsp">
+                    <a class="navbar-item" href="../ProductServlet?sendRedirect=/Brand">
                         Show all brands
                     </a>
                 </div>
@@ -47,15 +47,34 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <a class="button is-primary">
-                        Sign up
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
-                    <a class="button is-warning">
+                    <% if(session.getAttribute("Username") != null){
+
+                    %>
+                    <a class="button is-warning" href="../cart.jsp">
                         <strong>Cart</strong>
                     </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="../User">
+                            <%=session.getAttribute("Username")%>
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="../User/Logout">
+                                Log out
+                            </a>
+                        </div>
+                    </div>
+                    <%
+                    }else{
+                    %>
+                        <a class="button is-primary" href="../register.jsp">
+                            Sign up
+                        </a>
+                        <a class="button is-light" href="../login.jsp">
+                            Log in
+                        </a>
+                    <%
+                    }
+                    %>
                 </div>
             </div>
         </div>

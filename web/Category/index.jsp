@@ -79,7 +79,7 @@
         async mounted() {
             for (i = 0; i < this.categories.length; i++) {
                 try {
-                    const response = await axios.get('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1666ea49d8b45427f0aac41c0094021e&tags=pet '+this.categories[i]+', pet products&format=json&nojsoncallback=1')
+                    const response = await axios.get('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=43c5fbe2094c3f4e2c56f0a7e393d16f&tags=pet '+this.categories[i]+', pet products&format=json&nojsoncallback=1')
                     if (response.data.photos.photo.length > 0) {
                         const randIndex = Math.floor((Math.random() * response.data.photos.photo.length));
                         const farm = response.data.photos.photo[randIndex].farm
