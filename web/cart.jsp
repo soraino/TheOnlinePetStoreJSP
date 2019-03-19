@@ -84,7 +84,7 @@
         </tr>
         </tbody>
     </table>
-    <button id="customButton" type="button" @click="openStripe">Purchase</button>
+    <button class="button is-success" style="float:right;" id="customButton" type="button" @click="openStripe">Purchase</button>
     <div class="modal" :class="{'is-active':isLoading}">
         <div class="modal-background"></div>
         <div class="modal-content">

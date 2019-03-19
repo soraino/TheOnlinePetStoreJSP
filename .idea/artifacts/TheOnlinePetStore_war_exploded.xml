@@ -11,6 +11,28 @@
           <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.15.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/stripe-java-7.25.0.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/gson-2.8.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-dataformat-xml-2.8.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-databind-2.8.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/stax2-api-3.1.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-codec-socks-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-common-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/rxjava-2.2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-resolver-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-core-2.8.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/woodstox-core-5.0.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-transport-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-handler-proxy-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-codec-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-buffer-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-module-jaxb-annotations-2.8.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/client-runtime-2.0.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-codec-http-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/netty-handler-4.1.28.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/reactive-streams-1.0.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/azure-storage-blob-10.5.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-datatype-jsr310-2.8.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-annotations-2.8.0.jar" />
         </element>
       </element>
     </root>

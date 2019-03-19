@@ -34,14 +34,14 @@ public class AdminLoginServlet extends HttpServlet {
                 user.setPasswordHash(rs.getString("PasswordHash"));
                 if (user.checkPassword(request.getParameter("Password"))) {
                     HttpSession session = request.getSession();
-                    session.setAttribute("Username", user.getUsername());
-                    response.sendRedirect("../");
+                    session.setAttribute("AdminUser", user.getUsername());
+                    response.sendRedirect("../../ProductServlet?sendRedirect=../../Admin/Products");
                 } else {
-                    response.sendRedirect("../login.jsp?loginFailed=true");
+                    response.sendRedirect("../Admin/?loginFailed=true");
                 }
             }
         } catch (Exception e) {
-            response.sendRedirect("../login.jsp?error=true");
+            response.sendRedirect("../Admin/?error=true");
         }
     }
 }
