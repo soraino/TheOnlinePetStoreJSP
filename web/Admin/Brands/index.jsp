@@ -18,7 +18,7 @@
         HashMap<Integer, String> brands = (HashMap<Integer, String>) session.getAttribute("brands");
 %>
 <div class="container">
-    <a class="button is-success" style="float:right;" href="./AddBrand.jsp">Add Product</a>
+    <a class="button is-success" style="float:right;" href="./AddBrand.jsp">Add Brand</a>
     <br>
     <br>
     <div>

@@ -9,7 +9,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="../">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <p>ADMIN</p>
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -21,13 +21,9 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a href="../" class="navbar-item">
-                Home
-            </a>
-
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link" href="../../ProductServlet?sendRedirect=../../Admin/Products">
-                    Main Store
+                    Admin Services
                 </a>
 
                 <div class="navbar-dropdown">

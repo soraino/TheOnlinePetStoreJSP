@@ -30,7 +30,7 @@
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-square">
-                        <img v-bind:src="brandImages['<%=brands.get(key)%>'] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/No_image_available_600_x_450.svg/600px-No_image_available_600_x_450.svg.png'">
+                        <img v-bind:src="brandImages['<%=brands.get(key)%>'] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/No_image_available_600_x_450.svg/600px-No_image_available_600_x_450.svg.png'" alt="<%=brands.get(key)%>">
                     </figure>
                 </div>
                 <div class="card-content"
